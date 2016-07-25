@@ -5,7 +5,7 @@ from triangleCalculation import classifyTriangle as calc
 class TriangleTest(unittest.TestCase):
 
     def test_nottriangle(self):
-        self.assertEqual(calc(1, 1, 20), '')
+        self.assertEqual(calc(1, 1, 20), 'Invalid')
     
     def test_inputs(self):
         self.assertEqual(calc(1, 1, "a"), "")
@@ -23,7 +23,7 @@ class TriangleTest(unittest.TestCase):
     def test_equilateral(self):
         self.assertEqual(calc(1, 1, 1), "Equilateral")
         self.assertEqual(calc(0.1, 0.1, 0.1), "Equilateral")
-        self.assertEqual(calc(969486, 969486,969486), "Equilateral") 
+        self.assertEqual(calc(969486, 969486,969486), "Equilateral")
     
 if __name__ == "__main__":
     unittest.main()
