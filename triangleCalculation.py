@@ -63,7 +63,8 @@ def calcRightTriangle(a, b, c):
 
 def checkNumValid(numberChecked):
     try:
-        num = float(numberChecked)
+        equation = eval(numberChecked)
+        num = float(equation)
     except:
         num = None
 
