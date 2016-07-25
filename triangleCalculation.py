@@ -24,6 +24,8 @@ def angle (a, b, c):
     return round(math.degrees(math.acos((c**2 - b**2 - a**2)/(-2.0 * a * b))), 0)
     
 def verifyTriangle(a, b, c):
+        
+    # Triangle Inequality Theorem
     side1 = a + b
     side2 = b + c
     side3 = a + c
