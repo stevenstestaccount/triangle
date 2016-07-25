@@ -1,18 +1,23 @@
 import math
 
 def classifyTriangle(num1, num2, num3):
-    angle, rightTriangle = calcRightTriangle(num1, num2, num3)
-    triangleType = ""
-    if num1 == num2 and num2 == num3 and angle == "Equilateral":
-        triangleType = "Equilateral"
-    elif num1 != num2 and num2 != num3 and angle == "Scalene":
-        triangleType = "Scalene"
-    elif num1 == num2 or num2 == num3 or num3 == num1 and angle == "Isosceles":
-        triangleType = "Isosceles"
-
-    print("Triangle is a(n) {0} {1}".format(triangleType, rightTriangle))
     
-    return "{0} {1}".format(triangleType, rightTriangle).strip()
+    if verifyTriangle(num1, num2, num3) == 0:
+        print("This is not a valid triangle")    
+        return "Invalid"
+    else:
+        angle, rightTriangle = calcRightTriangle(num1, num2, num3)
+        triangleType = ""
+        if num1 == num2 and num2 == num3 and angle == "Equilateral":
+            triangleType = "Equilateral"
+        elif num1 != num2 and num2 != num3 and angle == "Scalene":
+            triangleType = "Scalene"
+        elif num1 == num2 or num2 == num3 or num3 == num1 and angle == "Isosceles":
+            triangleType = "Isosceles"
+    
+        print("Triangle is a(n) {0} {1}".format(triangleType, rightTriangle))
+        
+        return "{0} {1}".format(triangleType, rightTriangle).strip()
 
 
 def angle (a, b, c):
@@ -59,9 +64,7 @@ if __name__ == "__main__":
     num2 = input("Enter side 2 of triangle: ")
     num3 = input("Enter side 3 of triangle: ")
 
-    if verifyTriangle(num1, num2, num3) == 0:
-        print("This is not a valid triangle")
-    else:        
-        classifyTriangle(num1, num2, num3)
+    classifyTriangle(num1, num2, num3)
+   
         
 print ("All Done!")
