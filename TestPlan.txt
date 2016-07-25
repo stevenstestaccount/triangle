@@ -8,5 +8,8 @@ Test Cases
 4. Boundary conditions (min/max inputs)
 
 Bugs Found
-Equaliteral didn't work
-Invalid inputs
+Equilateral didn't work
+Doesn't handle invalid inputs (not digit inputs)
+
+Oracles used
+Rules of geometry
