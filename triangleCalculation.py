@@ -63,6 +63,11 @@ def calcRightTriangle(a, b, c):
 
 if __name__ == "__main__":
     num1 = input("Enter side 1 of triangle: ")
+    if num1.isdigit() == False:
+        print ("You did not enter a number!")
+    else:
+        num1 = input("Enter side 1 of triangle: ")
+        
     num2 = input("Enter side 2 of triangle: ")
     num3 = input("Enter side 3 of triangle: ")
 
