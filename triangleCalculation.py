@@ -25,7 +25,7 @@ def angle (a, b, c):
     
 def verifyTriangle(a, b, c):
         
-    # Triangle Inequality Theorem
+     # Triangle Inequality Theorem
     side1 = a + b
     side2 = b + c
     side3 = a + c
