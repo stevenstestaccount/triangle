@@ -30,6 +30,7 @@ class TriangleTest(unittest.TestCase):
         self.assertEqual(calc(9, 13, 14), 'Scalene')
         self.assertEqual(calc(14, 13, 9), 'Scalene')
         self.assertEqual(calc(13, 14, 9), 'Scalene')
+        self.assertEqual(calc(4, 5, 7), 'Scalene')
     
     def test_equilateral(self):
         self.assertEqual(calc(1, 1, 1), 'Equilateral')
@@ -38,6 +39,11 @@ class TriangleTest(unittest.TestCase):
         self.assertEqual(calc(4294967294, 4294967294, 4294967294), 'Equilateral')
         self.assertEqual(calc(4294967295, 4294967295, 4294967295), 'Equilateral')
 
+    def test_scalene_right(self):
+        self.assertEqual(calc(3, 4, 5), 'Scalene Right Triangle')
+    
+    def test_isosceles_right(self):
+        pass
     
 if __name__ == '__main__':
     unittest.main()
