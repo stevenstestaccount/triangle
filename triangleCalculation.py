@@ -13,11 +13,15 @@ def classifyTriangle(num1, num2, num3):
     print("Triangle is a(n) {0} {1}".format(triangleType, rightTriangle))
 
 
-def calcRightTriangle(num1, num2, num3):
+def angle (a, b, c):
+    return round(math.degrees(math.acos((c**2 - b**2 - a**2)/(-2.0 * a * b))), 0)
 
-    angle1 = round(math.degrees(math.acos((num1 * num1 + num2 * num2 - num3 * num3)/(2.0 * num2 * num3))), 0)
-    angle2 = round(math.degrees(math.acos((num1 * num1 + num2 * num2 - num3 * num3)/(2.0 * num1 * num2))), 0)
-    angle3 = round(math.degrees(math.acos((num1 * num1 + num2 * num2 - num3 * num3)/(2.0 * num1 * num3))), 0)
+
+def calcRightTriangle(a, b, c):
+   
+    angle1 = angle(a,b,c)
+    angle2 = angle(b,c,a)
+    angle3 = angle(c,a,b)
 
     rightAngle = ""
     angleType = ""
