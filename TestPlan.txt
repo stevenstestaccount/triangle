@@ -1,0 +1,15 @@
+Testing Mission
+Test for accuracy and robustness
+
+Test Cases
+1. Invalid triangles
+2. Test cases for each triangle type
+3. Invalid inputs (i.e. characters)
+4. Boundary conditions (min/max inputs)
+
+Bugs Found
+Equilateral didn't work
+Doesn't handle invalid inputs (not digit inputs)
+
+Oracles used
+Rules of geometry
