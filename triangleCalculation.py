@@ -50,12 +50,12 @@ def calcRightTriangle(a, b, c):
     if angle1 == 90 or angle2 == 90 or angle3 == 90:
         rightAngle = "Right Triangle"
 
-    if angle1 == angle2 or angle2 == angle3 or angle1 == angle3:
+    if angle1 == 60 and angle2 == 60 and angle3 == 60:
+        angleType = "Equilateral"    
+    elif angle1 == angle2 or angle2 == angle3 or angle1 == angle3:
         angleType = "Isosceles"
     elif angle1 != angle2 and angle2 != angle3 and angle1 != angle3:
         angleType = "Scalene"
-    elif angle1 == 60 and angle2 == 60 and angle3 == 60:
-        angleType = "Equilateral"
 
     print("RightAngle: {0}, Angle1: {1}, Angle2: {2}, Angle3: {3}".format(rightAngle, angle1, angle2, angle3))
 
