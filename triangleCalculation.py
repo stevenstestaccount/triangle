@@ -62,9 +62,35 @@ def calcRightTriangle(a, b, c):
     return angleType, rightAngle
 
 if __name__ == "__main__":
-    num1 = input("Enter side 1 of triangle: ")       
-    num2 = input("Enter side 2 of triangle: ")
-    num3 = input("Enter side 3 of triangle: ")
+    
+    valid1 = False
+    valid2 = False
+    valid3 = False
+    
+    while valid1 == False:
+        num1 = raw_input("Enter side 1 of triangle: ")       
+        if num1.isdigit() == True:
+            valid1 = True
+            num1 = float(num1)
+        else:
+            print("...Please enter a valid number")
+    
+    while valid2 == False:
+        num2 = raw_input("Enter side 2 of triangle: ")       
+        if num2.isdigit() == True:
+            valid2 = True
+            num2 = float (num2)
+        else:
+            print("...Please enter a valid number") 
+            
+    while valid3 == False:
+        num3 = raw_input("Enter side 3 of triangle: ")       
+        if num3.isdigit() == True:
+            valid3 = True
+            num3 = float(num3)
+        else:
+            print("...Please enter a valid number")
+
 
     classifyTriangle(num1, num2, num3)
    
