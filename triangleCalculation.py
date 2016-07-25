@@ -11,6 +11,8 @@ def classifyTriangle(num1, num2, num3):
         triangleType = "Isosceles"
 
     print("Triangle is a(n) {0} {1}".format(triangleType, rightTriangle))
+    
+    return "{0} {1}".format(triangleType, rightTriangle).strip()
 
 
 def angle (a, b, c):
