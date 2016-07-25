@@ -25,11 +25,7 @@ def verifyTriangle(a, b, c):
 
     isTriangle = 0
 
-    if side1 > c:
-        isTriangle = 1
-    elif side2 > a:
-        isTriangle = 1
-    elif side3 > b:
+    if side1 > c and side2 > a and side3 > b:
         isTriangle = 1
 
     return isTriangle
