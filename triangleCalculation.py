@@ -15,6 +15,22 @@ def classifyTriangle(num1, num2, num3):
 
 def angle (a, b, c):
     return round(math.degrees(math.acos((c**2 - b**2 - a**2)/(-2.0 * a * b))), 0)
+    
+def verifyTriangle(a, b, c):
+    side1 = a + b
+    side2 = b + c
+    side3 = a + c
+
+    isTriangle = 0
+
+    if side1 > c:
+        isTriangle = 1
+    elif side2 > a:
+        isTriangle = 1
+    elif side3 > b:
+        isTriangle = 1
+
+    return isTriangle
 
 
 def calcRightTriangle(a, b, c):
@@ -45,4 +61,7 @@ if __name__ == "__main__":
     num2 = input("Enter side 2 of triangle: ")
     num3 = input("Enter side 3 of triangle: ")
 
-    classifyTriangle(num1, num2, num3)
+    if verifyTriangle(num1, num2, num3) == 0:
+        print("This is not a valid triangle")
+    else:        
+        classifyTriangle(num1, num2, num3)
