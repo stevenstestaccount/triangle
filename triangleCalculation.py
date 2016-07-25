@@ -67,3 +67,5 @@ if __name__ == "__main__":
         print("This is not a valid triangle")
     else:        
         classifyTriangle(num1, num2, num3)
+        
+print ("All Done!")
